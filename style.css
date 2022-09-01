@@ -10,6 +10,7 @@
 body {
     background: #fff;
     box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.12);
+    padding-top: 10px;
     border-radius: 16px;
     font-family: 'Roboto',
         sans-serif;
@@ -44,26 +45,52 @@ p {
     font-weight: bold;
 }
 
-.left {
+.days {
     color: #888;
+    text-transform: initial;
 }
 
 .uppercase {
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 400;
+    margin-top: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.responsive {
+    width: 100%;
+    max-width: 768px;
+    height: auto;
 }
 
 
+/*@media (max-width: 576px) {}*/
 
-@media (max-width: 576px) {}
+@media (max-width: 1238px) and (min-width: 500px) {
+    .persons-block:last-child {
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 926px) and (min-width: 500px) {
+
+    #partners {
+        flex-direction: column;
+        row-gap: 25px;
+    }
+
+}
 
 
+/*@media (min-width: 577px) {*/
 @media (min-width: 577px) {
 
     .container {
         margin: 50px;
-        border: 2px solid red;
-        /* laikinas*/
+
     }
 
     header {
@@ -162,11 +189,21 @@ p {
         text-decoration: none;
         color: #000;
         /*border: 3px solid linear-gradient(to left, #743ad5, #d53a9d);*/
-        border: 3px solid #743ad5;
+        box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
+        border: solid 3px transparent;
+        background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #FF8139, #FF3939);
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        box-shadow: 2px 1000px 1px #fff inset;
+    }
 
+    .intro .button:hover {
+        box-shadow: none;
+        color: white;
     }
 
     #banner {
+        margin-top: 100px;
         height: 300px;
         background-image: url(assets/background.svg);
         background-color: white;
@@ -196,10 +233,47 @@ p {
 
     #about {
         padding-top: 100px;
+        height: 500px;
+    }
+
+    #about .persons-block {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #about .card {
+        border: 1px solid #EEE;
+        background-color: #EEEEEE;
+        border-radius: 18px;
+        padding-bottom: 20px;
+
+    }
+
+    .info {
+        margin: 10px;
+
+    }
+
+    .info .nft-name {
+        float: left;
+        width: 50%;
+    }
+
+    .info .price {
+        float: right;
+        width: 50%;
+        text-align: right;
+
+    }
+
+    .eth {
+        float: left;
+        margin-left: 30px;
     }
 
     #launch {
-        padding-top: 100px;
+        padding-top: 140px;
         display: grid;
         grid-template-rows: 1fr;
         grid-template-columns: 1fr 1fr;
@@ -235,9 +309,14 @@ p {
         text-align: center;
     }
 
-    #launch .hr {
-        border-top: 1px solid #888;
+    .hr {
+        border-top: 1px solid #999;
+        margin: -5px;
+    }
 
+    .hr1 {
+        border-top: 1px solid #999;
+        margin-top: 150px;
     }
 
 
@@ -264,6 +343,28 @@ p {
 
     }
 
+
+    #footer-box ul {
+        margin-left: 0 !important;
+        padding: 0;
+    }
+
+
+
+    #footer-box ul li a {
+        text-decoration: none;
+        padding-inline-start: 0px;
+
+    }
+
+    #footer-box h6 {
+        text-align: left;
+        font-size: medium;
+        text-transform: uppercase;
+        margin-top: 0;
+        margin-bottom: 25px;
+    }
+
     #item>ul>li>a {
         text-transform: uppercase;
         font-weight: bold;
@@ -271,7 +372,6 @@ p {
 
     #item-about h6 {
         font-size: 50px;
-
     }
 
     #item-about {
@@ -411,20 +511,32 @@ p {
 
     .footer-ico {
         box-sizing: border-box;
-        align-content: space-between;
-        justify-content: center;
+        align-content: flex-start;
+        justify-content: left;
     }
 
-    .ico {
-        margin-top: 15px;
-        color: #645cff;
-        font-size: 24px;
+
+
+    .footer-ico ul li {
+        display: inline-block;
+        text-decoration: none;
+
     }
+
+    .footer-ico {
+        margin-top: 15px;
+        color: #888;
+        font-size: 20px;
+    }
+
 
     .copyright {
+        margin-top: 100px;
         display: flex;
         justify-content: space-between;
         text-align: center;
         align-items: center;
     }
+
+
 }
