@@ -23,10 +23,16 @@
             </div>
             <div class="navigator">
                 <nav>
-                    <a href="#features" title="Features">Features</a>
-                    <a href="#about" title="About">About</a>
-                    <a href="#launch" title="Launch">Launch</a>
-                    <a href="#signup" title="Sign Up">Sign Up</a>
+                    <div id="links">
+                        <a href="#features" title="Features">Features</a>
+                        <a href="#about" title="About">About</a>
+                        <a href="#launch" title="Launch">Launch</a>
+                        <a href="#signup" title="Sign Up">Sign Up</a>
+                    </div>
+                    <div class="mob-menu">
+                        <a href="javascript:void(0);" class="mob-icon" onclick="myFunction()">
+                            <i class="fa fa-bars"></i></a>
+                    </div>
                 </nav>
             </div>
         </header>
@@ -218,7 +224,16 @@
         </footer>
     </div>
     <!--main-->
-
+    <script>
+        function myFunction() {
+            var x = document.getElementById("links");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
 </body>
 
 </html>
